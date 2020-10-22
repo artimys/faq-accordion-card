@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*==========
+DEFAULTS
+=========*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 2.5em;
+}
+
+/*==========
+COMPONENTS
+=========*/
+.faq-section {
+  position: relative;
+  width: 400px;
+  padding: 2em 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.faq-section__arrow {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.faq-section__question {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.faq-section__question:hover {
+  font-weight: 700;
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.faq-section__answer {
+  display: none;
+  line-height: 1.3rem;
+}
+
+.faq-section.faq-section--open .faq-section__arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faq-section.faq-section--open .faq-section__question {
+  font-weight: 700;
+}
+
+.faq-section.faq-section--open .faq-section__answer {
+  display: block;
+  margin-top: 1.5em;
+}
+
+/*==========
+LAYOUT
+=========*/
+.container {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 2em;
+  max-width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.attribution {
+  display: none;
+}
+
+/*==========
+DESKTOP
+=========*/
+/*# sourceMappingURL=main.css.map */
