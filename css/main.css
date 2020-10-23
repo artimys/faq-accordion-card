@@ -28,7 +28,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 2em;
+  padding-top: 10em;
 }
 
 /*==========
@@ -141,6 +141,9 @@ LAYOUT
 DESKTOP
 =========*/
 @media only screen and (min-width: 1100px) {
+  body {
+    padding-top: auto;
+  }
   .container {
     max-width: 950px;
     -webkit-box-orient: horizontal;

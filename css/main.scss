@@ -38,7 +38,9 @@ body {
     justify-content: center;
     flex-direction: column;
 
-    padding-top: 2em;
+    // Extra padding for top of mobile illustration
+    // that sticks out
+    padding-top: 10em;
 }
 
 
@@ -157,6 +159,11 @@ DESKTOP
 =========*/
 
 @media only screen and (min-width: 1100px) {
+
+    body {
+        // Reset mobile padding
+        padding-top: auto;
+    }
 
     .container {
         max-width: 950px;
