@@ -46,10 +46,10 @@ COMPONENTS
   top: 5px;
   right: 0;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 .faq-section__question {
@@ -102,7 +102,7 @@ LAYOUT
   position: relative;
 }
 
-.container .illustration__box {
+.container .illustration-box {
   display: none;
   position: absolute;
   z-index: 3;
@@ -132,7 +132,7 @@ LAYOUT
   padding: 2.5em;
 }
 
-.container main .title {
+.container main h1 {
   text-align: center;
   margin-bottom: 0.7em;
 }
@@ -142,7 +142,7 @@ DESKTOP
 =========*/
 @media only screen and (min-width: 1100px) {
   body {
-    padding-top: auto;
+    padding: 2em 0;
   }
   .container {
     max-width: 950px;
@@ -156,7 +156,7 @@ DESKTOP
     background-size: cover;
     background-position: -550px -275px;
   }
-  .container .illustration__box {
+  .container .illustration-box {
     display: block;
   }
   .container header {
@@ -178,7 +178,7 @@ DESKTOP
             flex: 1;
     padding: 6em 8em 6em 0;
   }
-  .container main .title {
+  .container main h1 {
     text-align: left;
     font-size: 2rem;
   }

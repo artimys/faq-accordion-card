@@ -31,4 +31,3 @@ function displayQuestion(event) {
 for (i=0; i < questions.length; i++) {
     questions[i].addEventListener("click", displayQuestion);
 }
-
