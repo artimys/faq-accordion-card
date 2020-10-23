@@ -137,6 +137,12 @@ LAYOUT
   margin-bottom: 0.7em;
 }
 
+.attribution {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 /*==========
 DESKTOP
 =========*/
