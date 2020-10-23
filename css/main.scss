@@ -36,8 +36,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    margin: 0 2.5em;
+    padding-top: 2em;
 }
 
 
@@ -49,21 +50,23 @@ COMPONENTS
 
 .faq-section {
     position: relative;
-    width: 400px;
-    padding: 2em 0;
+    padding: 1.5em 0;
     border-bottom: 1px solid $light-grayish-blue;
+    color: $dark-grayish-blue;
 
     &__arrow {
         position: absolute;
-        top: 2em;
+        top: 5px;
         right: 0;
         cursor: pointer;
         transition: transform 0.5s;
     }
 
     &__question {
+        position: relative;
         font-weight: 400;
         font-size: 0.9rem;
+        color: $very-dark-desaturated-blue;
         &:hover {
             font-weight: 700;
             color: $soft-red;
@@ -73,6 +76,7 @@ COMPONENTS
     &__answer {
         display: none;
         line-height: 1.3rem;
+        width: 95%;
     }
 }
 .faq-section.faq-section--open {
@@ -86,36 +90,113 @@ COMPONENTS
 
     .faq-section__answer {
         display: block;
-        margin-top: 1.5em;
+        margin-top: 1em;
     }
 
 
 }
 
 
+
 /*==========
 LAYOUT
 =========*/
+
 .container {
     background-color: #fff;
-    border-radius: 30px;
-    padding: 2em;
-    max-width: 1100px;
+    border-radius: 25px;
+    width: 80%;
 
     display: flex;
     flex-direction: column;
+
+    position: relative;
+    .illustration__box {
+        display: none;
+        position: absolute;
+        z-index: 3;
+        // width: 165px;
+        // height: 184px;
+        top: 50%;
+        margin-top: -40px;
+        left: -93px;
+    }
+
+    header {
+        background: url(../images/bg-pattern-mobile.svg) no-repeat;
+        background-position: top center;
+        position: relative;
+        height: 115px;
+
+       picture {
+            display: block;
+            position: absolute;
+            width: 266px;
+            height: 196px;
+            top: -107px;
+            left: 50%;
+            margin-left: -147px;
+        }
+    }
+
+    main {
+        padding: 2.5em;
+
+        .title {
+            text-align: center;
+            margin-bottom: 0.7em;
+
+        }
+    }
 }
 
 
-.attribution {
-    display: none;
-}
 
 /*==========
 DESKTOP
 =========*/
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1100px) {
+
+    .container {
+        max-width: 950px;
+        flex-direction: row;
+        column-gap: 2em;
+
+        background: url(../images/bg-pattern-desktop.svg) #fff no-repeat;
+        background-size: cover;
+        background-position: -550px -275px;
+
+
+        .illustration__box {
+            display: block;
+        }
+
+        header {
+            flex: 1.2;
+
+            // Remove mobile background
+            background: none;
+
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            picture {
+                top: 77px;
+                left: 70px;
+                // width: 300px;
+            }
+        }
+
+        main {
+            flex: 1;
+            padding: 6em 8em 6em 0;
+
+            .title {
+                text-align: left;
+                font-size: 2rem;
+            }
+        }
+    }
 
 }
-

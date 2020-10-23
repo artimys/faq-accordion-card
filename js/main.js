@@ -1,7 +1,3 @@
-/*******************************************
- * COMMON PAGE ELEMENTS
- * *****************************************/
-
 const questions = document.getElementsByClassName("faq-section__question");
 const answers = document.getElementsByClassName("faq-section__answer");
 
